@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Falcon Hacks 2026 — Build Something That Takes Flight
 
-## Getting Started
+Marketing site for **Falcon Hacks 2026**, a student-run Bay Area hackathon hosted by the Falcon Hacks club at Foothill High School.
 
-First, run the development server:
+**Sat · November 14, 2026 — Bay Area · Venue TBA**
+
+## Stack
+
+- [Next.js 16](https://nextjs.org) (App Router, static prerender — no backend)
+- TypeScript
+- Tailwind CSS v4 (design tokens in [`app/globals.css`](app/globals.css))
+- Framer Motion (reveals, hero sequence, drawer/accordion)
+- Lucide icons (+ hand-drawn brand icons in [`components/SocialIcons.tsx`](components/SocialIcons.tsx))
+
+Type: **Anton** (display) · **Archivo** (body) · **IBM Plex Mono** (readouts) — self-hosted via `next/font`.
+
+## Getting started
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # production build (fully static)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Updating links
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Every outward link (updates list, registration, sponsorship, Instagram, Discord, LinkedIn, email) lives in one file: [`lib/links.ts`](lib/links.ts). Swap a placeholder there and it updates site-wide. Until real destinations exist, the update/sponsor CTAs scroll to the footer.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Structure
 
-## Learn More
+```
+app/            layout (fonts, metadata), page, global styles, favicon
+components/     one file per section — Hero, Marquee, Why, Experience,
+                OpenToAll, Venue, Sponsors, Faq, FinalCta, Footer, Nav
+                + shared kit: CtaLink, Reveal, SectionTag, FalconFlight, FalconMark
+lib/links.ts    all placeholder URLs
+```
 
-To learn more about Next.js, take a look at the following resources:
+No invented facts on the page: venue, schedule, sponsors, prizes, and registration all render as intentional "coming soon / TBA" states until announced.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Built by students. For students.
