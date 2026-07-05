@@ -8,12 +8,9 @@ const PHRASES = [
   "Take flight",
 ];
 
-function Row({ ariaHidden = false }: { ariaHidden?: boolean }) {
+function Row() {
   return (
-    <div
-      className="flex shrink-0 items-center"
-      aria-hidden={ariaHidden || undefined}
-    >
+    <div className="flex shrink-0 items-center">
       {[0, 1].map((rep) =>
         PHRASES.map((phrase, i) => (
           <span
@@ -30,7 +27,7 @@ function Row({ ariaHidden = false }: { ariaHidden?: boolean }) {
               {phrase}
             </span>
             <span
-              className="h-2.5 w-2.5 shrink-0 rotate-45 bg-ember"
+              className="h-2.5 w-2.5 shrink-0 rotate-45 bg-gold"
               aria-hidden
             />
           </span>
@@ -47,9 +44,10 @@ export default function Marquee() {
       role="marquee"
       aria-label="Build, learn, ship, create, compete, meet your team, take flight"
     >
-      <div className="marquee-track flex w-max">
+      {/* Text is decorative motion; the label above carries the content. */}
+      <div className="marquee-track flex w-max" aria-hidden="true">
         <Row />
-        <Row ariaHidden />
+        <Row />
       </div>
     </div>
   );

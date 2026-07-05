@@ -18,9 +18,9 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <p className="flex items-center gap-2.5">
-              <FalconMark className="h-8 w-8 text-ember" />
+              <FalconMark className="h-8 w-8 text-royal" />
               <span className="font-display text-2xl tracking-[0.06em] text-bone">
-                FALCON HACKS <span className="text-ember">’26</span>
+                FALCON HACKS <span className="text-gold">’26</span>
               </span>
             </p>
             <p className="mt-5 max-w-[340px] text-sm leading-relaxed text-muted">
@@ -35,8 +35,9 @@ export default function Footer() {
               Mission
             </p>
             <ul className="mt-5 space-y-3 font-mono text-xs uppercase tracking-[0.16em] text-bone/85">
-              <li>November 14, 2026</li>
+              <li>October 10, 2026</li>
               <li>Bay Area · Venue TBA</li>
+              <li className="text-gold">Free to attend</li>
               <li className="text-muted">Registration — coming soon</li>
             </ul>
           </div>
@@ -51,7 +52,7 @@ export default function Footer() {
                 <li key={item.href}>
                   <a
                     href={item.href}
-                    className="font-mono text-xs uppercase tracking-[0.16em] text-bone/85 transition-colors hover:text-ember"
+                    className="font-mono text-xs uppercase tracking-[0.16em] text-bone/85 transition-colors hover:text-royal"
                   >
                     {item.label}
                   </a>
@@ -71,7 +72,7 @@ export default function Footer() {
                   <a
                     href={href}
                     aria-label={label}
-                    className="flex h-11 w-11 items-center justify-center border border-hairline text-muted transition-all duration-200 hover:-translate-y-0.5 hover:border-ember hover:text-ember"
+                    className="flex h-11 w-11 items-center justify-center border border-hairline text-muted transition-all duration-200 hover:-translate-y-0.5 hover:border-royal hover:text-royal"
                   >
                     <Icon className="h-[18px] w-[18px]" aria-hidden />
                   </a>
@@ -90,7 +91,7 @@ export default function Footer() {
             © 2026 Falcon Hacks
           </p>
           <p className="flex items-center gap-2.5 font-mono text-[11px] uppercase tracking-[0.24em] text-bone/80">
-            <span className="inline-block h-1.5 w-1.5 bg-ember" aria-hidden />
+            <span className="inline-block h-1.5 w-1.5 bg-gold" aria-hidden />
             Built by students. For students.
           </p>
         </div>

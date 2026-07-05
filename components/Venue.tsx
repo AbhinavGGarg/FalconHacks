@@ -23,11 +23,11 @@ function SurveyGrid() {
       <p className="absolute right-4 top-4 z-10 font-mono text-[10px] uppercase tracking-[0.24em] text-muted">
         LON — TBA
       </p>
-      <p className="absolute bottom-4 left-4 z-10 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.24em] text-ember">
-        <span className="blink inline-block h-1.5 w-1.5 rounded-full bg-ember" aria-hidden />
+      <p className="absolute bottom-4 left-4 z-10 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.24em] text-gold">
+        <span className="blink inline-block h-1.5 w-1.5 rounded-full bg-gold" aria-hidden />
         Site scan active
       </p>
-      <p className="absolute bottom-4 right-4 z-10 font-mono text-[10px] uppercase tracking-[0.24em] text-cobalt">
+      <p className="absolute bottom-4 right-4 z-10 font-mono text-[10px] uppercase tracking-[0.24em] text-royal">
         Region locked
       </p>
 
@@ -67,7 +67,7 @@ function SurveyGrid() {
             y1="260"
             x2="260"
             y2="18"
-            stroke="var(--ember)"
+            stroke="var(--royal)"
             strokeWidth="1.5"
             opacity="0.6"
           />
@@ -76,7 +76,7 @@ function SurveyGrid() {
             y1="260"
             x2="330"
             y2="32"
-            stroke="var(--ember)"
+            stroke="var(--royal)"
             strokeWidth="1"
             opacity="0.18"
           />
@@ -89,7 +89,7 @@ function SurveyGrid() {
               cx={c.x}
               cy={c.y}
               r="4"
-              fill="var(--cobalt)"
+              fill="var(--gold)"
               className="blink"
               style={{ animationDelay: c.delay }}
             />
@@ -98,7 +98,7 @@ function SurveyGrid() {
               cy={c.y}
               r="12"
               fill="none"
-              stroke="var(--cobalt)"
+              stroke="var(--gold)"
               strokeWidth="1"
               opacity="0.35"
             />
@@ -107,10 +107,10 @@ function SurveyGrid() {
 
         {/* Center: the undecided landing point */}
         <g>
-          <circle cx="260" cy="260" r="34" fill="none" stroke="var(--ember)" strokeWidth="1" className="radar-pulse" />
-          <circle cx="260" cy="260" r="34" fill="none" stroke="var(--ember)" strokeWidth="1" className="radar-pulse" style={{ animationDelay: "-1.6s" }} />
-          <line x1="244" y1="260" x2="276" y2="260" stroke="var(--ember)" strokeWidth="1.5" />
-          <line x1="260" y1="244" x2="260" y2="276" stroke="var(--ember)" strokeWidth="1.5" />
+          <circle cx="260" cy="260" r="34" fill="none" stroke="var(--royal)" strokeWidth="1" className="radar-pulse" />
+          <circle cx="260" cy="260" r="34" fill="none" stroke="var(--royal)" strokeWidth="1" className="radar-pulse" style={{ animationDelay: "-1.6s" }} />
+          <line x1="244" y1="260" x2="276" y2="260" stroke="var(--royal)" strokeWidth="1.5" />
+          <line x1="260" y1="244" x2="260" y2="276" stroke="var(--royal)" strokeWidth="1.5" />
         </g>
       </svg>
     </div>
@@ -132,7 +132,7 @@ export default function Venue() {
             <h2 className="mt-8 font-display text-5xl uppercase leading-[0.95] sm:text-7xl">
               The Bay Area.
               <br />
-              <span className="text-ember">Exact coordinates soon.</span>
+              <span className="text-royal">Exact coordinates soon.</span>
             </h2>
           </Reveal>
           <Reveal delay={0.16}>

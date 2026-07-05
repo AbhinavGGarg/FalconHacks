@@ -39,7 +39,7 @@ export default function Experience() {
         <Reveal delay={0.08}>
           <h2 className="mt-8 max-w-[900px] font-display text-5xl uppercase leading-[0.95] sm:text-7xl">
             Your next favorite project{" "}
-            <span className="text-stroke-ember">starts here.</span>
+            <span className="text-stroke-royal">starts here.</span>
           </h2>
         </Reveal>
 
@@ -51,7 +51,7 @@ export default function Experience() {
                 style={{ paddingLeft: `min(${i * 4}%, ${i * 44}px)` }}
               >
                 <span
-                  className="font-mono text-sm font-semibold tracking-widest text-ember/70 transition-colors duration-300 group-hover:text-ember sm:text-base"
+                  className="font-mono text-sm font-semibold tracking-widest text-gold/70 transition-colors duration-300 group-hover:text-gold sm:text-base"
                   aria-hidden
                 >
                   {String(i + 1).padStart(2, "0")}
@@ -71,7 +71,7 @@ export default function Experience() {
 
         <Reveal delay={0.2}>
           <p className="mt-10 inline-flex items-center gap-3 border border-hairline px-5 py-3 font-mono text-[11px] font-medium uppercase tracking-[0.28em] text-muted">
-            <span className="blink inline-block h-2 w-2 rounded-full bg-ember" aria-hidden />
+            <span className="blink inline-block h-2 w-2 rounded-full bg-gold" aria-hidden />
             Full agenda coming soon
           </p>
         </Reveal>

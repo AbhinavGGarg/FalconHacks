@@ -22,17 +22,18 @@ const plexMono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   title: "Falcon Hacks 2026 — Build Something That Takes Flight",
   description:
-    "A student-run Bay Area hackathon hosted by Falcon Hacks at Foothill High School. November 14, 2026.",
+    "A student-run Bay Area hackathon hosted by Falcon Hacks at Foothill High School. October 10, 2026.",
   openGraph: {
     title: "Falcon Hacks 2026 — Build Something That Takes Flight",
     description:
-      "A student-run Bay Area hackathon hosted by Falcon Hacks at Foothill High School. November 14, 2026.",
+      "A student-run Bay Area hackathon hosted by Falcon Hacks at Foothill High School. October 10, 2026.",
     type: "website",
   },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#08090f",
+  // Mirrors --void in globals.css — keep in sync if the token changes.
+  themeColor: "#05080f",
 };
 
 export default function RootLayout({
@@ -48,7 +49,7 @@ export default function RootLayout({
       <body className="bg-void text-bone font-sans">
         <a
           href="#main"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[120] focus:bg-ember focus:px-4 focus:py-2 focus:font-mono focus:text-xs focus:uppercase focus:tracking-widest focus:text-void"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[120] focus:bg-gold focus:px-4 focus:py-2 focus:font-mono focus:text-xs focus:uppercase focus:tracking-widest focus:text-void"
         >
           Skip to content
         </a>

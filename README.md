@@ -2,7 +2,8 @@
 
 Marketing site for **Falcon Hacks 2026**, a student-run Bay Area hackathon hosted by the Falcon Hacks club at Foothill High School.
 
-**Sat · November 14, 2026 — Bay Area · Venue TBA**
+**Sat · October 10, 2026 — Bay Area · Venue TBA**
+**Free to attend · open to all high schoolers and younger**
 
 ## Stack
 
@@ -10,7 +11,10 @@ Marketing site for **Falcon Hacks 2026**, a student-run Bay Area hackathon hoste
 - TypeScript
 - Tailwind CSS v4 (design tokens in [`app/globals.css`](app/globals.css))
 - Framer Motion (reveals, hero sequence, drawer/accordion)
+- Canvas boids flock behind the hero ([`components/FlockField.tsx`](components/FlockField.tsx)) — move your cursor through it
 - Lucide icons (+ hand-drawn brand icons in [`components/SocialIcons.tsx`](components/SocialIcons.tsx))
+
+Palette is the Foothill falcon's: royal blue `#3e7bff` + gold `#f5b324` on blue-ink `#05080f`, warm bone text.
 
 Type: **Anton** (display) · **Archivo** (body) · **IBM Plex Mono** (readouts) — self-hosted via `next/font`.
 

@@ -34,7 +34,7 @@ function Runway() {
         y1="40"
         x2="600"
         y2="430"
-        stroke="var(--ember)"
+        stroke="var(--gold)"
         strokeWidth="2.5"
         strokeDasharray="10 14"
         className="runway-dash"
@@ -47,7 +47,7 @@ function Runway() {
             cx={585 - 255 * t}
             cy={40 + 390 * t}
             r={2 + t * 2.5}
-            fill="var(--ember)"
+            fill="var(--gold)"
             className="blink"
             style={{ animationDelay: `${i * -0.55}s` }}
           />
@@ -55,14 +55,14 @@ function Runway() {
             cx={615 + 255 * t}
             cy={40 + 390 * t}
             r={2 + t * 2.5}
-            fill="var(--ember)"
+            fill="var(--gold)"
             className="blink"
             style={{ animationDelay: `${i * -0.55 - 0.28}s` }}
           />
         </g>
       ))}
       {/* Threshold point */}
-      <circle cx="600" cy="40" r="3.5" fill="var(--cobalt)" />
+      <circle cx="600" cy="40" r="3.5" fill="var(--royal)" />
     </svg>
   );
 }
@@ -79,13 +79,13 @@ export default function FinalCta() {
           <h2 className="font-display text-[clamp(3.4rem,10vw,9rem)] uppercase leading-[0.92]">
             Your idea
             <br />
-            <span className="text-ember">deserves a runway.</span>
+            <span className="text-royal">deserves a runway.</span>
           </h2>
         </Reveal>
 
         <Reveal delay={0.14}>
           <p className="mt-8 font-mono text-sm font-medium uppercase tracking-[0.3em] text-bone/85 sm:text-base">
-            November 14, 2026 · Bay Area · Falcon Hacks
+            October 10, 2026 · Bay Area · Falcon Hacks
           </p>
         </Reveal>
 
@@ -99,7 +99,8 @@ export default function FinalCta() {
 
         <Reveal delay={0.32}>
           <p className="mt-6 text-sm text-muted">
-            Venue, registration, sponsors, and more coming soon.
+            <span className="text-gold">Free to attend.</span> Venue,
+            registration, sponsors, and more coming soon.
           </p>
         </Reveal>
       </div>

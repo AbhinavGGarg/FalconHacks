@@ -30,9 +30,9 @@ export default function CtaLink({
 
   const variants = {
     solid:
-      "bg-ember text-void font-semibold hover:bg-emberhot hover:-translate-y-0.5 hover:shadow-[0_10px_36px_-10px_rgba(255,77,31,0.65)]",
+      "bg-gold text-void font-semibold hover:bg-goldhot hover:-translate-y-0.5 hover:shadow-[0_10px_36px_-10px_rgba(245,179,36,0.6)]",
     outline:
-      "border border-bone/25 text-bone hover:border-ember hover:text-ember hover:-translate-y-0.5",
+      "border border-bone/25 text-bone hover:border-royal hover:text-royalhot hover:-translate-y-0.5",
   }[variant];
 
   return (

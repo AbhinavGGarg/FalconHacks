@@ -37,7 +37,7 @@ export default function Why() {
             <h2 className="font-display text-5xl uppercase leading-[0.95] sm:text-7xl">
               One day.
               <br />
-              <span className="text-ember">A hundred possibilities.</span>
+              <span className="text-royal">A hundred possibilities.</span>
             </h2>
           </Reveal>
           <Reveal delay={0.16}>
@@ -52,18 +52,18 @@ export default function Why() {
         <div className="mt-14 grid gap-5 md:grid-cols-3">
           {CARDS.map((card, i) => (
             <Reveal key={card.title} delay={0.1 + i * 0.1}>
-              <article className="group relative h-full border border-hairline bg-panel p-8 transition-all duration-300 hover:-translate-y-1.5 hover:border-ember/50 hover:shadow-[0_18px_50px_-24px_rgba(255,77,31,0.45)] sm:p-9">
+              <article className="group relative h-full border border-hairline bg-panel p-8 transition-all duration-300 hover:-translate-y-1.5 hover:border-royal/50 hover:shadow-[0_18px_50px_-24px_rgba(62,123,255,0.45)] sm:p-9">
                 {/* Blueprint corner brackets, revealed on hover */}
                 <span
-                  className="absolute left-0 top-0 h-4 w-4 border-l-2 border-t-2 border-ember opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                  className="absolute left-0 top-0 h-4 w-4 border-l-2 border-t-2 border-royal opacity-0 transition-opacity duration-300 group-hover:opacity-100"
                   aria-hidden
                 />
                 <span
-                  className="absolute bottom-0 right-0 h-4 w-4 border-b-2 border-r-2 border-ember opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                  className="absolute bottom-0 right-0 h-4 w-4 border-b-2 border-r-2 border-royal opacity-0 transition-opacity duration-300 group-hover:opacity-100"
                   aria-hidden
                 />
 
-                <div className="flex h-14 w-14 items-center justify-center border border-hairline text-ember transition-all duration-300 group-hover:bg-ember group-hover:text-void">
+                <div className="flex h-14 w-14 items-center justify-center border border-hairline text-royal transition-all duration-300 group-hover:bg-royal group-hover:text-void">
                   <card.icon className="h-6 w-6" aria-hidden />
                 </div>
 

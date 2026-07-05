@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import FalconMark from "./FalconMark";
@@ -11,6 +11,10 @@ export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const reduce = useReducedMotion();
+  const triggerRef = useRef<HTMLButtonElement>(null);
+  const closeRef = useRef<HTMLButtonElement>(null);
+  const drawerRef = useRef<HTMLDivElement>(null);
+  const wasOpen = useRef(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -31,6 +35,46 @@ export default function Nav() {
     };
   }, [open]);
 
+  // The drawer only exists below lg; if the viewport crosses the
+  // breakpoint while it's open, close it so body scroll unlocks.
+  useEffect(() => {
+    const mq = window.matchMedia("(min-width: 1024px)");
+    const onChange = (e: MediaQueryListEvent) => {
+      if (e.matches) setOpen(false);
+    };
+    mq.addEventListener("change", onChange);
+    return () => mq.removeEventListener("change", onChange);
+  }, []);
+
+  // Focus management: into the dialog on open, back to the trigger on close.
+  useEffect(() => {
+    if (open) {
+      wasOpen.current = true;
+      closeRef.current?.focus();
+    } else if (wasOpen.current) {
+      wasOpen.current = false;
+      triggerRef.current?.focus();
+    }
+  }, [open]);
+
+  // Keep Tab inside the open drawer.
+  const trapTab = (e: React.KeyboardEvent) => {
+    if (e.key !== "Tab") return;
+    const focusables = drawerRef.current?.querySelectorAll<HTMLElement>(
+      'a[href], button:not([disabled])'
+    );
+    if (!focusables || focusables.length === 0) return;
+    const first = focusables[0];
+    const last = focusables[focusables.length - 1];
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
+    }
+  };
+
   return (
     <header
       className={`fixed inset-x-0 top-0 z-[100] transition-all duration-300 ${
@@ -48,9 +92,9 @@ export default function Nav() {
           className="group flex items-center gap-2.5"
           aria-label="Falcon Hacks ’26 — back to top"
         >
-          <FalconMark className="h-7 w-7 text-ember transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+          <FalconMark className="h-7 w-7 text-royal transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
           <span className="font-display text-lg tracking-[0.06em] text-bone">
-            FALCON HACKS <span className="text-ember">’26</span>
+            FALCON HACKS <span className="text-gold">’26</span>
           </span>
         </a>
 
@@ -65,7 +109,7 @@ export default function Nav() {
                 >
                   {item.label}
                   <span
-                    className="absolute -bottom-1.5 left-0 h-px w-0 bg-ember transition-all duration-300 group-hover:w-full"
+                    className="absolute -bottom-1.5 left-0 h-px w-0 bg-royal transition-all duration-300 group-hover:w-full"
                     aria-hidden
                   />
                 </a>
@@ -79,12 +123,13 @@ export default function Nav() {
 
         {/* Mobile trigger */}
         <button
+          ref={triggerRef}
           type="button"
           onClick={() => setOpen(true)}
           aria-expanded={open}
           aria-controls="mobile-menu"
           aria-label="Open menu"
-          className="flex h-11 w-11 items-center justify-center border border-hairline text-bone transition-colors hover:border-ember hover:text-ember lg:hidden"
+          className="flex h-11 w-11 items-center justify-center border border-hairline text-bone transition-colors hover:border-royal hover:text-royal lg:hidden"
         >
           <Menu className="h-5 w-5" aria-hidden />
         </button>
@@ -94,10 +139,12 @@ export default function Nav() {
       <AnimatePresence>
         {open && (
           <motion.div
+            ref={drawerRef}
             id="mobile-menu"
             role="dialog"
             aria-modal="true"
             aria-label="Menu"
+            onKeyDown={trapTab}
             initial={reduce ? { opacity: 0 } : { opacity: 0, y: -16 }}
             animate={{ opacity: 1, y: 0 }}
             exit={reduce ? { opacity: 0 } : { opacity: 0, y: -16 }}
@@ -106,16 +153,17 @@ export default function Nav() {
           >
             <div className="flex h-[72px] items-center justify-between border-b border-hairline px-5 sm:px-8">
               <span className="flex items-center gap-2.5">
-                <FalconMark className="h-7 w-7 text-ember" />
+                <FalconMark className="h-7 w-7 text-royal" />
                 <span className="font-display text-lg tracking-[0.06em] text-bone">
-                  FALCON HACKS <span className="text-ember">’26</span>
+                  FALCON HACKS <span className="text-gold">’26</span>
                 </span>
               </span>
               <button
+                ref={closeRef}
                 type="button"
                 onClick={() => setOpen(false)}
                 aria-label="Close menu"
-                className="flex h-11 w-11 items-center justify-center border border-hairline text-bone transition-colors hover:border-ember hover:text-ember"
+                className="flex h-11 w-11 items-center justify-center border border-hairline text-bone transition-colors hover:border-royal hover:text-royal"
               >
                 <X className="h-5 w-5" aria-hidden />
               </button>
@@ -134,10 +182,10 @@ export default function Nav() {
                     onClick={() => setOpen(false)}
                     className="group flex items-baseline gap-4 py-3"
                   >
-                    <span className="font-mono text-[11px] text-ember">
+                    <span className="font-mono text-[11px] text-gold">
                       {String(i + 1).padStart(2, "0")}
                     </span>
-                    <span className="font-display text-5xl uppercase leading-none text-bone transition-colors group-hover:text-ember">
+                    <span className="font-display text-5xl uppercase leading-none text-bone transition-colors group-hover:text-royal">
                       {item.label}
                     </span>
                   </a>
@@ -155,7 +203,7 @@ export default function Nav() {
                 Get Updates
               </CtaLink>
               <p className="mt-4 text-center font-mono text-[10px] uppercase tracking-[0.28em] text-muted">
-                Sat · November 14, 2026 — Bay Area
+                Sat · October 10, 2026 — Bay Area
               </p>
             </div>
           </motion.div>

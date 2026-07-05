@@ -10,7 +10,11 @@ import { LINKS } from "@/lib/links";
 const FAQS = [
   {
     q: "Who can attend?",
-    a: "Falcon Hacks is built to welcome student creators and builders from across the Bay Area. More attendance details will be released with registration.",
+    a: "All high school students and younger are welcome — Falcon Hacks is built for student creators and builders from across the Bay Area. More attendance details will be released with registration.",
+  },
+  {
+    q: "How much does it cost?",
+    a: "Nothing. Falcon Hacks is completely free to attend.",
   },
   {
     q: "Do I need coding experience?",
@@ -48,7 +52,7 @@ export default function Faq() {
             <h2 className="mt-8 font-display text-5xl uppercase leading-[0.95] sm:text-6xl">
               Before
               <br />
-              you <span className="text-ember">ask.</span>
+              you <span className="text-royal">ask.</span>
             </h2>
           </Reveal>
           <Reveal delay={0.16}>
@@ -60,7 +64,7 @@ export default function Faq() {
           <Reveal delay={0.22}>
             <a
               href={LINKS.updates}
-              className="mt-6 inline-flex items-center gap-2 font-mono text-xs font-semibold uppercase tracking-[0.2em] text-ember transition-colors hover:text-emberhot"
+              className="mt-6 inline-flex items-center gap-2 font-mono text-xs font-semibold uppercase tracking-[0.2em] text-royal transition-colors hover:text-royalhot"
             >
               Join the update list
               <span aria-hidden>↗</span>
@@ -79,13 +83,13 @@ export default function Faq() {
                       type="button"
                       onClick={() => setOpenIndex(isOpen ? null : i)}
                       aria-expanded={isOpen}
-                      aria-controls={`faq-panel-${i}`}
+                      aria-controls={isOpen ? `faq-panel-${i}` : undefined}
                       id={`faq-button-${i}`}
                       className="group flex w-full items-center justify-between gap-6 py-6 text-left transition-colors"
                     >
                       <span
                         className={`text-lg font-semibold transition-colors duration-200 sm:text-xl ${
-                          isOpen ? "text-ember" : "text-bone group-hover:text-ember"
+                          isOpen ? "text-royal" : "text-bone group-hover:text-royal"
                         }`}
                       >
                         {faq.q}
@@ -93,8 +97,8 @@ export default function Faq() {
                       <span
                         className={`flex h-9 w-9 shrink-0 items-center justify-center border transition-all duration-300 ${
                           isOpen
-                            ? "rotate-45 border-ember bg-ember text-void"
-                            : "border-hairline text-muted group-hover:border-ember group-hover:text-ember"
+                            ? "rotate-45 border-royal bg-royal text-void"
+                            : "border-hairline text-muted group-hover:border-royal group-hover:text-royal"
                         }`}
                         aria-hidden
                       >

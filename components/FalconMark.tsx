@@ -1,9 +1,13 @@
-/* The Falcon Hacks mark: three swept wing blades + a beak triangle.
-   Drawn once here, reused in the nav, footer, sponsor tiles, favicon. */
+/* The Falcon Hacks mark: three swept wing blades + a gold beak — the
+   Foothill falcon reduced to geometry. Reused in the nav, footer,
+   sponsor tiles, favicon. `mono` renders everything in currentColor
+   (for ghost watermarks). */
 export default function FalconMark({
   className = "h-6 w-6",
+  mono = false,
 }: {
   className?: string;
+  mono?: boolean;
 }) {
   return (
     <svg
@@ -19,7 +23,11 @@ export default function FalconMark({
         fill="currentColor"
         opacity="0.5"
       />
-      <path d="M38 13 L58 5 L47.5 23.5 Z" fill="currentColor" opacity="0.85" />
+      <path
+        d="M38 13 L58 5 L47.5 23.5 Z"
+        fill={mono ? "currentColor" : "var(--gold)"}
+        opacity={mono ? 0.85 : 1}
+      />
     </svg>
   );
 }
