@@ -2,13 +2,14 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 
-/* The hero emblem: the Foothill Falcons crest, framed in the site's
-   instrumentation language — a duotone glow, a slow blueprint ring, and
-   dashed stoop-trails sweeping in from below — so the logo reads as
-   designed-in rather than pasted on.
+/* The hero emblem: the Foothill crest set into a bone medallion with a
+   gold rim — the logo is drawn for a light background, so the seal gives
+   it the contrast it needs and reads as an official school crest. The
+   medallion floats inside the site's instrumentation (a slow blueprint
+   ring + dashed stoop-trails).
 
-   The crest lives at /public/falcon-crest.svg (traced vector, crisp at
-   any size). Replace that file to swap the logo; the frame stays. */
+   The crest itself lives at /public/falcon-crest.svg (traced vector).
+   Replace that file to swap the logo; the medallion frame stays. */
 export default function FalconCrest({
   className = "",
 }: {
@@ -18,42 +19,24 @@ export default function FalconCrest({
 
   return (
     <div className={`relative ${className}`}>
-      {/* Duotone glow behind the crest */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-[10%] rounded-full"
-        style={{
-          background:
-            "radial-gradient(circle at 54% 42%, rgba(62,123,255,0.34), rgba(245,179,36,0.12) 46%, transparent 70%)",
-        }}
-      />
-
-      {/* Instrumentation: rings, stoop-trails, wingtip ticks */}
+      {/* Instrumentation: rings + stoop-trails around the medallion */}
       <svg
         aria-hidden
-        viewBox="0 0 680 620"
+        viewBox="0 0 680 680"
         fill="none"
         className="pointer-events-none absolute inset-0 h-full w-full"
       >
         <circle
-          cx="360"
-          cy="300"
-          r="272"
+          cx="340"
+          cy="340"
+          r="330"
           stroke="var(--hairline)"
           strokeWidth="1"
           strokeDasharray="4 12"
           className="spin-slow"
         />
-        <circle
-          cx="360"
-          cy="300"
-          r="214"
-          stroke="var(--hairline)"
-          strokeWidth="1"
-          strokeDasharray="2 14"
-        />
         <path
-          d="M-40 560 C 180 520, 300 448, 470 300"
+          d="M-40 620 C 200 580, 330 500, 470 360"
           stroke="var(--royal)"
           strokeWidth="1.5"
           strokeDasharray="3 9"
@@ -61,7 +44,7 @@ export default function FalconCrest({
           opacity="0.5"
         />
         <path
-          d="M-40 612 C 220 584, 372 504, 520 356"
+          d="M-40 672 C 240 640, 400 560, 540 410"
           stroke="var(--gold)"
           strokeWidth="1"
           strokeDasharray="2 10"
@@ -70,21 +53,25 @@ export default function FalconCrest({
         />
       </svg>
 
-      {/* The crest */}
+      {/* The medallion */}
       <motion.div
-        className="relative flex h-full w-full items-center justify-center"
+        className="relative mx-auto flex aspect-square w-[82%] max-w-[460px] items-center justify-center"
         initial={reduce ? false : { opacity: 0, scale: 0.92, y: 12 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
       >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/falcon-crest.svg"
-          alt="Foothill High School Falcons crest"
-          width={1167}
-          height={1167}
-          className="float-idle w-[86%] max-w-[560px] drop-shadow-[0_24px_70px_rgba(0,0,0,0.55)]"
-        />
+        <div className="float-idle h-full w-full rounded-full bg-gold p-[2.5%] shadow-[0_30px_90px_-26px_rgba(0,0,0,0.8)]">
+          <div className="flex h-full w-full items-center justify-center rounded-full bg-bone p-[12%] shadow-[inset_0_2px_14px_rgba(5,8,15,0.18)]">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/falcon-crest.svg"
+              alt="Foothill High School Falcons crest"
+              width={1167}
+              height={1167}
+              className="h-full w-full object-contain"
+            />
+          </div>
+        </div>
       </motion.div>
     </div>
   );

@@ -55,8 +55,9 @@ export default function Hero() {
         aria-hidden
       />
 
-      {/* The falcon crest — faint behind copy on mobile, framed emblem lower-right on desktop */}
-      <div className="pointer-events-none absolute right-[-8%] top-[15%] aspect-square w-[92vw] opacity-[0.12] sm:right-[0%] sm:top-[12%] sm:w-[58vw] sm:opacity-25 lg:right-[3%] lg:top-[56%] lg:w-[36vw] lg:max-w-[500px] lg:-translate-y-1/2 lg:opacity-100">
+      {/* The falcon crest medallion — desktop only; a light seal behind
+          mobile copy would hurt contrast, and the nav carries the crest there */}
+      <div className="pointer-events-none absolute right-[1%] top-[62%] hidden aspect-square w-[33vw] max-w-[440px] -translate-y-1/2 lg:block xl:right-[3%]">
         <FalconCrest className="h-full w-full" />
       </div>
 
