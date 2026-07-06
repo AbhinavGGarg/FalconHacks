@@ -12,7 +12,7 @@ export default function CodeStartersMark({
       alt="CodeStarters"
       width={308}
       height={47}
-      className={`w-auto object-contain ${className}`}
+      className={`w-auto shrink-0 object-contain ${className}`}
     />
   );
 }

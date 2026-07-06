@@ -100,13 +100,16 @@ export default function Nav() {
             </span>
           </a>
           <span
-            className="hidden items-center gap-3 sm:flex"
+            className="hidden items-center gap-3.5 sm:flex"
             aria-label="Cohosted with CodeStarters"
           >
-            <span className="font-display text-lg text-muted/40" aria-hidden>
-              ×
+            <span
+              className="text-2xl leading-none text-muted/50"
+              aria-hidden
+            >
+              ·
             </span>
-            <CodeStartersMark className="h-[18px]" />
+            <CodeStartersMark className="h-[23px]" />
           </span>
         </div>
 
