@@ -8,8 +8,8 @@ export const LINKS = {
   updates: "#contact",
   /** Registration platform — replace when registration opens */
   register: "#contact",
-  /** Sponsorship form or pitch deck — replace with the real URL */
-  sponsor: "#contact",
+  /** Sponsorship inquiries — opens an email to the organizer */
+  sponsor: "mailto:abhinavmgarg@gmail.com?subject=Sponsoring%20Falcon%20Hacks%202026",
   /** e.g. https://instagram.com/falconhacks */
   instagram: "#",
   /** e.g. https://discord.gg/xxxx */
