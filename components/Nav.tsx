@@ -104,7 +104,7 @@ export default function Nav() {
             aria-label="Cohosted with CodeStarters"
           >
             <span
-              className="text-2xl leading-none text-muted/50"
+              className="text-4xl leading-none text-muted/55"
               aria-hidden
             >
               ·
