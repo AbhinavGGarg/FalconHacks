@@ -24,8 +24,8 @@ function Rise({
   return (
     <motion.div
       className={className}
-      initial={reduce ? false : { opacity: 0, y: 36 }}
-      animate={{ opacity: 1, y: 0 }}
+      initial={reduce ? false : { opacity: 0 }}
+      animate={{ opacity: 1 }}
       transition={{ delay, duration: 0.85, ease: EASE }}
     >
       {children}
