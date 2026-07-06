@@ -26,6 +26,14 @@ npm run dev      # http://localhost:3000
 npm run build    # production build (fully static)
 ```
 
+## Swapping in the official crest
+
+The hero emblem is [`public/falcon-crest.png`](public/falcon-crest.png) — currently a
+vector recreation of the Foothill falcon in school blue and gold. To use the official
+school logo, replace that one file (a transparent PNG reads best on the dark hero); the
+frame, glow, and instrumentation around it stay the same. No code change needed.
+The framing lives in [`components/FalconCrest.tsx`](components/FalconCrest.tsx).
+
 ## Updating links
 
 Every outward link (updates list, registration, sponsorship, Instagram, Discord, LinkedIn, email) lives in one file: [`lib/links.ts`](lib/links.ts). Swap a placeholder there and it updates site-wide. Until real destinations exist, the update/sponsor CTAs scroll to the footer.

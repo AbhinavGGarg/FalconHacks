@@ -3,7 +3,7 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { Calendar, MapPin, Sparkles } from "lucide-react";
 import CtaLink from "./CtaLink";
-import FalconFlight from "./FalconFlight";
+import FalconCrest from "./FalconCrest";
 import FalconMark from "./FalconMark";
 import FlockField from "./FlockField";
 import { LINKS } from "@/lib/links";
@@ -54,12 +54,9 @@ export default function Hero() {
         aria-hidden
       />
 
-      {/* The falcon — behind copy on mobile, beside it on desktop */}
-      <div
-        className="pointer-events-none absolute -right-[34%] top-[4%] w-[130vw] max-w-none opacity-25 sm:-right-[16%] sm:w-[92vw] sm:opacity-40 lg:-right-[6%] lg:top-[2%] lg:w-[62vw] lg:max-w-[1040px] lg:opacity-100"
-        aria-hidden
-      >
-        <FalconFlight className="h-auto w-full" />
+      {/* The falcon crest — faint behind copy on mobile, framed emblem on desktop */}
+      <div className="pointer-events-none absolute right-[-14%] top-[12%] aspect-[7/6] w-[118vw] opacity-20 sm:right-[-6%] sm:top-[8%] sm:w-[78vw] sm:opacity-40 lg:right-[1%] lg:top-1/2 lg:w-[48vw] lg:max-w-[660px] lg:-translate-y-1/2 lg:opacity-100">
+        <FalconCrest className="h-full w-full" />
       </div>
 
       {/* Copy block */}
