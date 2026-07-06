@@ -2,6 +2,7 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import { Calendar, MapPin, Sparkles } from "lucide-react";
+import CodeStartersMark from "./CodeStartersMark";
 import Countdown from "./Countdown";
 import CtaLink from "./CtaLink";
 import FalconCrest from "./FalconCrest";
@@ -138,11 +139,15 @@ export default function Hero() {
           </Rise>
 
           <Rise delay={0.66}>
-            <p className="mt-10 flex items-center gap-3 text-sm text-muted">
-              <FalconMark className="h-4 w-4 text-royal/70" />
-              Hosted by Falcon Hacks at Foothill High School · Cohosted with
-              CodeStarters
-            </p>
+            <div className="mt-10 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-muted">
+              <FalconMark className="h-4 w-4 shrink-0 text-royal/70" aria-hidden />
+              <span>Hosted by Falcon Hacks at Foothill High School</span>
+              <span className="text-muted/50" aria-hidden>
+                ·
+              </span>
+              <span>Cohosted with</span>
+              <CodeStartersMark className="h-[18px]" />
+            </div>
           </Rise>
         </div>
       </div>

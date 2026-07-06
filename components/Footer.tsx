@@ -1,3 +1,4 @@
+import CodeStartersMark from "./CodeStartersMark";
 import CrestMark from "./CrestMark";
 import { LINKS, NAV_ITEMS } from "@/lib/links";
 
@@ -15,9 +16,8 @@ export default function Footer() {
               </span>
             </p>
             <p className="mt-5 max-w-[340px] text-sm leading-relaxed text-muted">
-              Hosted by Falcon Hacks at Foothill High School and cohosted with
-              CodeStarters — a student-run hackathon for builders across the Bay
-              Area.
+              Hosted by Falcon Hacks at Foothill High School — a student-run
+              hackathon for builders across the Bay Area.
             </p>
             <a
               href={LINKS.discord}
@@ -35,6 +35,10 @@ export default function Footer() {
               </svg>
               Join our Discord
             </a>
+            <p className="mt-6 flex items-center gap-2.5 font-mono text-[10px] uppercase tracking-[0.24em] text-muted">
+              Cohosted with
+              <CodeStartersMark className="h-4" />
+            </p>
           </div>
 
           {/* Mission facts */}
