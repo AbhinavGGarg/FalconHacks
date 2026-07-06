@@ -104,11 +104,9 @@ export default function Nav() {
             aria-label="Cohosted with CodeStarters"
           >
             <span
-              className="text-4xl leading-none text-muted/55"
+              className="h-2.5 w-2.5 shrink-0 rounded-full bg-muted/70"
               aria-hidden
-            >
-              ·
-            </span>
+            />
             <CodeStartersMark className="h-[23px]" />
           </span>
         </div>
