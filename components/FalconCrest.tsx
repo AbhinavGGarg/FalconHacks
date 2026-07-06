@@ -68,18 +68,6 @@ export default function FalconCrest({
           className="dash-flow"
           opacity="0.32"
         />
-        {[0, 1, 2].map((i) => (
-          <line
-            key={i}
-            x1={150 - i * 30}
-            y1={150 + i * 26}
-            x2={104 - i * 30}
-            y2={188 + i * 26}
-            stroke="var(--bone)"
-            strokeWidth="1.5"
-            opacity={0.24 - i * 0.06}
-          />
-        ))}
       </svg>
 
       {/* The crest */}
