@@ -9,11 +9,11 @@ export default function CrestMark({
   return (
     // eslint-disable-next-line @next/next/no-img-element
     <img
-      src="/falcon-crest.png"
+      src="/falcon-crest.svg"
       alt=""
       aria-hidden
-      width={1200}
-      height={1200}
+      width={1167}
+      height={1167}
       className={`object-contain ${className}`}
     />
   );

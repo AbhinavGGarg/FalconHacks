@@ -28,11 +28,12 @@ npm run build    # production build (fully static)
 
 ## Swapping in the official crest
 
-The hero emblem is [`public/falcon-crest.png`](public/falcon-crest.png) — currently a
-vector recreation of the Foothill falcon in school blue and gold. To use the official
-school logo, replace that one file (a transparent PNG reads best on the dark hero); the
-frame, glow, and instrumentation around it stay the same. No code change needed.
-The framing lives in [`components/FalconCrest.tsx`](components/FalconCrest.tsx).
+The hero emblem is [`public/falcon-crest.svg`](public/falcon-crest.svg) — the Foothill
+crest traced to clean vector so it stays razor-sharp at any size (hero and nav). To use a
+different logo, replace that one file (a transparent SVG or PNG); the frame, glow, and
+instrumentation around it stay the same. No code change needed. The framing lives in
+[`components/FalconCrest.tsx`](components/FalconCrest.tsx); the small nav/footer lockup is
+[`components/CrestMark.tsx`](components/CrestMark.tsx).
 
 ## Updating links
 

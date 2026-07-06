@@ -7,8 +7,8 @@ import { motion, useReducedMotion } from "framer-motion";
    dashed stoop-trails sweeping in from below — so the logo reads as
    designed-in rather than pasted on.
 
-   The crest lives at /public/falcon-crest.png. Drop the official school
-   logo in at that path (transparent PNG) and it takes over the frame. */
+   The crest lives at /public/falcon-crest.svg (traced vector, crisp at
+   any size). Replace that file to swap the logo; the frame stays. */
 export default function FalconCrest({
   className = "",
 }: {
@@ -79,10 +79,10 @@ export default function FalconCrest({
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/falcon-crest.png"
+          src="/falcon-crest.svg"
           alt="Foothill High School Falcons crest"
-          width={1400}
-          height={1196}
+          width={1167}
+          height={1167}
           className="float-idle w-[86%] max-w-[560px] drop-shadow-[0_24px_70px_rgba(0,0,0,0.55)]"
         />
       </motion.div>
