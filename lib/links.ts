@@ -10,6 +10,8 @@ export const LINKS = {
   updates: "https://forms.gle/7Ke1xrKE1VZp9HJm8",
   /** Sponsorship inquiries — opens an email to the organizer */
   sponsor: "mailto:abhinavmgarg@gmail.com?subject=Sponsoring%20Falcon%20Hacks%202026",
+  /** Sponsorship prospectus PDF (hosted in /public) — opens in a new tab */
+  prospectus: "/sponsorship-prospectus.pdf",
   /** e.g. https://instagram.com/falconhacks */
   instagram: "#",
   /** e.g. https://discord.gg/xxxx */

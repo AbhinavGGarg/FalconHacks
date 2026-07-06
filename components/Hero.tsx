@@ -112,6 +112,9 @@ export default function Hero() {
               <CtaLink href={LINKS.sponsor} size="lg" variant="outline">
                 Become a Sponsor
               </CtaLink>
+              <CtaLink href={LINKS.prospectus} size="lg" variant="outline">
+                Sponsorship Prospectus
+              </CtaLink>
             </div>
           </Rise>
 

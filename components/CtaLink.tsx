@@ -36,7 +36,7 @@ export default function CtaLink({
       "border border-bone/25 text-bone hover:border-royal hover:text-royalhot hover:-translate-y-0.5",
   }[variant];
 
-  const external = /^https?:\/\//.test(href);
+  const external = /^https?:\/\//.test(href) || /\.pdf(\?|$)/i.test(href);
 
   return (
     <a

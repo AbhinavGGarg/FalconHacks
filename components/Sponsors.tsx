@@ -37,9 +37,14 @@ export default function Sponsors() {
             </Reveal>
           </div>
           <Reveal delay={0.22} className="lg:justify-self-end">
-            <CtaLink href={LINKS.sponsor} size="lg">
-              Partner With Falcon Hacks
-            </CtaLink>
+            <div className="flex flex-wrap gap-4 lg:justify-end">
+              <CtaLink href={LINKS.sponsor} size="lg">
+                Partner With Falcon Hacks
+              </CtaLink>
+              <CtaLink href={LINKS.prospectus} size="lg" variant="outline">
+                See Prospectus
+              </CtaLink>
+            </div>
           </Reveal>
         </div>
 
