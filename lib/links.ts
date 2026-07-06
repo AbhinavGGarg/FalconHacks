@@ -14,8 +14,8 @@ export const LINKS = {
   prospectus: "/sponsorship-prospectus.pdf",
   /** e.g. https://instagram.com/falconhacks */
   instagram: "#",
-  /** e.g. https://discord.gg/xxxx */
-  discord: "#",
+  /** Community Discord server invite */
+  discord: "https://discord.gg/DRa3YHkPDp",
   /** e.g. https://linkedin.com/company/falcon-hacks */
   linkedin: "#",
   /** Replace with the real inbox */
