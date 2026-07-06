@@ -55,7 +55,7 @@ export default function Hero() {
       />
 
       {/* The falcon crest — faint behind copy on mobile, framed emblem lower-right on desktop */}
-      <div className="pointer-events-none absolute right-[-12%] top-[14%] aspect-square w-[104vw] opacity-[0.12] sm:right-[-4%] sm:top-[10%] sm:w-[66vw] sm:opacity-25 lg:right-[-2%] lg:top-[57%] lg:w-[40vw] lg:max-w-[560px] lg:-translate-y-1/2 lg:opacity-100">
+      <div className="pointer-events-none absolute right-[-8%] top-[15%] aspect-square w-[92vw] opacity-[0.12] sm:right-[0%] sm:top-[12%] sm:w-[58vw] sm:opacity-25 lg:right-[3%] lg:top-[56%] lg:w-[36vw] lg:max-w-[500px] lg:-translate-y-1/2 lg:opacity-100">
         <FalconCrest className="h-full w-full" />
       </div>
 
