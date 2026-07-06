@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import CodeStartersMark from "./CodeStartersMark";
 import CrestMark from "./CrestMark";
 import CtaLink from "./CtaLink";
 import { LINKS, NAV_ITEMS } from "@/lib/links";
@@ -87,16 +88,27 @@ export default function Nav() {
         aria-label="Main"
         className="mx-auto flex h-[72px] max-w-[1400px] items-center justify-between px-5 sm:px-8"
       >
-        <a
-          href="#top"
-          className="group flex items-center gap-2.5"
-          aria-label="Falcon Hacks ’26 — back to top"
-        >
-          <CrestMark className="h-10 w-10 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-          <span className="font-display text-lg tracking-[0.06em] text-bone">
-            FALCON HACKS <span className="text-gold">’26</span>
+        <div className="flex items-center gap-3.5">
+          <a
+            href="#top"
+            className="group flex items-center gap-2.5"
+            aria-label="Falcon Hacks ’26 — back to top"
+          >
+            <CrestMark className="h-10 w-10 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+            <span className="font-display text-lg tracking-[0.06em] text-bone">
+              FALCON HACKS <span className="text-gold">’26</span>
+            </span>
+          </a>
+          <span
+            className="hidden items-center gap-3 sm:flex"
+            aria-label="Cohosted with CodeStarters"
+          >
+            <span className="font-display text-lg text-muted/40" aria-hidden>
+              ×
+            </span>
+            <CodeStartersMark className="h-[18px]" />
           </span>
-        </a>
+        </div>
 
         {/* Desktop links */}
         <div className="hidden items-center gap-8 lg:flex">
