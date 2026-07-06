@@ -1,5 +1,5 @@
 import CrestMark from "./CrestMark";
-import { NAV_ITEMS } from "@/lib/links";
+import { LINKS, NAV_ITEMS } from "@/lib/links";
 
 export default function Footer() {
   return (
@@ -29,7 +29,16 @@ export default function Footer() {
               <li>October 10, 2026</li>
               <li>Bay Area · Venue TBA</li>
               <li className="text-gold">Free to attend</li>
-              <li className="text-muted">Registration — coming soon</li>
+              <li>
+                <a
+                  href={LINKS.register}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gold transition-colors hover:text-goldhot"
+                >
+                  Registration — open now ↗
+                </a>
+              </li>
             </ul>
           </div>
 

@@ -116,8 +116,8 @@ export default function Nav() {
               </li>
             ))}
           </ul>
-          <CtaLink href={LINKS.updates} size="sm" showArrow={false}>
-            Get Updates
+          <CtaLink href={LINKS.register} size="sm" showArrow={false}>
+            Register
           </CtaLink>
         </div>
 
@@ -195,12 +195,12 @@ export default function Nav() {
 
             <div className="border-t border-hairline p-6">
               <CtaLink
-                href={LINKS.updates}
+                href={LINKS.register}
                 size="lg"
                 className="w-full"
                 showArrow
               >
-                Get Updates
+                Register
               </CtaLink>
               <p className="mt-4 text-center font-mono text-[10px] uppercase tracking-[0.28em] text-muted">
                 Sat · October 10, 2026 — Bay Area

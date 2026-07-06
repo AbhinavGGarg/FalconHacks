@@ -91,16 +91,16 @@ export default function FinalCta() {
 
         <Reveal delay={0.24}>
           <div className="mt-10">
-            <CtaLink href={LINKS.updates} size="lg">
-              Get Event Updates
+            <CtaLink href={LINKS.register} size="lg">
+              Register Now
             </CtaLink>
           </div>
         </Reveal>
 
         <Reveal delay={0.32}>
           <p className="mt-6 text-sm text-muted">
-            <span className="text-gold">Free to attend.</span> Venue,
-            registration, sponsors, and more coming soon.
+            <span className="text-gold">Free to attend.</span> Registration
+            is open — venue, sponsors, and more announced soon.
           </p>
         </Reveal>
       </div>

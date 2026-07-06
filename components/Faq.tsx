@@ -10,7 +10,7 @@ import { LINKS } from "@/lib/links";
 const FAQS = [
   {
     q: "Who can attend?",
-    a: "All high school students and younger are welcome — Falcon Hacks is built for student creators and builders from across the Bay Area. More attendance details will be released with registration.",
+    a: "All high school students and younger are welcome — Falcon Hacks is built for student creators and builders from across the Bay Area. Registration is open now.",
   },
   {
     q: "How much does it cost?",
@@ -29,8 +29,8 @@ const FAQS = [
     a: "The event will take place in the Bay Area. Venue details are coming soon.",
   },
   {
-    q: "How do I get updates?",
-    a: "Join the update list and follow Falcon Hacks for announcements.",
+    q: "How do I register?",
+    a: "Registration is open — click any Register button on this page to fill out the form. Follow Falcon Hacks for other announcements too.",
   },
 ];
 
@@ -57,16 +57,18 @@ export default function Faq() {
           </Reveal>
           <Reveal delay={0.16}>
             <p className="mt-6 max-w-[360px] text-base leading-relaxed text-muted">
-              More details roll out as registration gets closer. The update
-              list hears everything first.
+              Registration is open now — more details roll out as the event
+              gets closer, so sign up and you won’t miss anything.
             </p>
           </Reveal>
           <Reveal delay={0.22}>
             <a
-              href={LINKS.updates}
+              href={LINKS.register}
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-6 inline-flex items-center gap-2 font-mono text-xs font-semibold uppercase tracking-[0.2em] text-royal transition-colors hover:text-royalhot"
             >
-              Join the update list
+              Register now
               <span aria-hidden>↗</span>
             </a>
           </Reveal>

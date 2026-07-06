@@ -4,10 +4,10 @@
    "#contact" scrolls to the footer until real destinations exist. */
 
 export const LINKS = {
-  /** Mailing-list / updates signup — replace with the real form URL */
-  updates: "#contact",
-  /** Registration platform — replace when registration opens */
-  register: "#contact",
+  /** Registration form (Google Form) — every "Register" button points here */
+  register: "https://forms.gle/7Ke1xrKE1VZp9HJm8",
+  /** Legacy alias, kept in sync with register */
+  updates: "https://forms.gle/7Ke1xrKE1VZp9HJm8",
   /** Sponsorship inquiries — opens an email to the organizer */
   sponsor: "mailto:abhinavmgarg@gmail.com?subject=Sponsoring%20Falcon%20Hacks%202026",
   /** e.g. https://instagram.com/falconhacks */

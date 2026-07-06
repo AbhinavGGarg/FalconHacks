@@ -137,14 +137,14 @@ export default function Venue() {
           </Reveal>
           <Reveal delay={0.16}>
             <p className="mt-7 max-w-[520px] text-base leading-relaxed text-muted sm:text-lg">
-              We’re finding the right home for Falcon Hacks 2026. Join the
-              update list to be first to hear when the venue is announced.
+              We’re finding the right home for Falcon Hacks 2026. Register
+              now and you’ll be first to hear when the venue is announced.
             </p>
           </Reveal>
           <Reveal delay={0.24}>
             <div className="mt-9">
-              <CtaLink href={LINKS.updates} size="lg">
-                Get Venue Updates
+              <CtaLink href={LINKS.register} size="lg">
+                Register Now
               </CtaLink>
             </div>
           </Reveal>

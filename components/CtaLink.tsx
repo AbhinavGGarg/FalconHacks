@@ -3,7 +3,8 @@ import type { ReactNode } from "react";
 
 type Variant = "solid" | "outline";
 
-/* Tactile CTA used across the site. Anchor-only — no backend yet. */
+/* Tactile CTA used across the site. External links (http/https) open in
+   a new tab automatically; anchors and mailto stay in-page. */
 export default function CtaLink({
   href,
   children,
@@ -35,8 +36,14 @@ export default function CtaLink({
       "border border-bone/25 text-bone hover:border-royal hover:text-royalhot hover:-translate-y-0.5",
   }[variant];
 
+  const external = /^https?:\/\//.test(href);
+
   return (
-    <a href={href} className={`${base} ${sizes} ${variants} ${className}`}>
+    <a
+      href={href}
+      {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+      className={`${base} ${sizes} ${variants} ${className}`}
+    >
       {children}
       {showArrow && (
         <ArrowUpRight

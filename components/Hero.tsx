@@ -106,8 +106,8 @@ export default function Hero() {
 
           <Rise delay={0.54}>
             <div className="mt-9 flex flex-wrap items-center gap-4">
-              <CtaLink href={LINKS.updates} size="lg">
-                Get Event Updates
+              <CtaLink href={LINKS.register} size="lg">
+                Register Now
               </CtaLink>
               <CtaLink href={LINKS.sponsor} size="lg" variant="outline">
                 Become a Sponsor
