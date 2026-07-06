@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import FalconMark from "./FalconMark";
+import CrestMark from "./CrestMark";
 import CtaLink from "./CtaLink";
 import { LINKS, NAV_ITEMS } from "@/lib/links";
 
@@ -92,7 +92,7 @@ export default function Nav() {
           className="group flex items-center gap-2.5"
           aria-label="Falcon Hacks ’26 — back to top"
         >
-          <FalconMark className="h-7 w-7 text-royal transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+          <CrestMark className="h-10 w-10 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
           <span className="font-display text-lg tracking-[0.06em] text-bone">
             FALCON HACKS <span className="text-gold">’26</span>
           </span>
@@ -153,7 +153,7 @@ export default function Nav() {
           >
             <div className="flex h-[72px] items-center justify-between border-b border-hairline px-5 sm:px-8">
               <span className="flex items-center gap-2.5">
-                <FalconMark className="h-7 w-7 text-royal" />
+                <CrestMark className="h-10 w-10" />
                 <span className="font-display text-lg tracking-[0.06em] text-bone">
                   FALCON HACKS <span className="text-gold">’26</span>
                 </span>

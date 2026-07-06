@@ -29,7 +29,7 @@ export default function Experience() {
   return (
     <section
       id="experience"
-      className="relative scroll-mt-24 border-t border-hairline py-24 sm:py-32"
+      className="relative scroll-mt-24 overflow-hidden border-t border-hairline py-24 sm:py-32"
     >
       <div className="drift" style={{ top: "18%", animationDelay: "-8s" }} aria-hidden />
       <div className="mx-auto max-w-[1400px] px-5 sm:px-8">

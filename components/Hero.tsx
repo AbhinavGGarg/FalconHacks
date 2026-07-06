@@ -2,6 +2,7 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import { Calendar, MapPin, Sparkles } from "lucide-react";
+import Countdown from "./Countdown";
 import CtaLink from "./CtaLink";
 import FalconCrest from "./FalconCrest";
 import FalconMark from "./FalconMark";
@@ -136,32 +137,7 @@ export default function Hero() {
                 <span className="text-gold">October 10, 2026</span>
               </p>
             </div>
-            <div
-              role="group"
-              className="flex items-center gap-5 font-mono sm:gap-7"
-              aria-label="Countdown activates soon"
-            >
-              {["Days", "Hrs", "Min", "Sec"].map((unit, i) => (
-                <div key={unit} className="flex items-center gap-5 sm:gap-7">
-                  {i > 0 && (
-                    <span className="text-lg text-bone/25 sm:text-2xl" aria-hidden>
-                      :
-                    </span>
-                  )}
-                  <div className="text-center">
-                    <p className="text-2xl font-semibold tracking-widest text-bone/60 sm:text-3xl">
-                      ——
-                    </p>
-                    <p className="mt-1 text-[9px] uppercase tracking-[0.3em] text-muted">
-                      {unit}
-                    </p>
-                  </div>
-                </div>
-              ))}
-              <p className="hidden max-w-[120px] text-[9px] uppercase leading-relaxed tracking-[0.22em] text-muted xl:block">
-                T-minus sync pending
-              </p>
-            </div>
+            <Countdown />
           </div>
         </div>
       </Rise>

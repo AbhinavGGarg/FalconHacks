@@ -8,7 +8,7 @@ export default function Sponsors() {
   return (
     <section
       id="sponsors"
-      className="relative scroll-mt-24 border-t border-hairline py-24 sm:py-32"
+      className="relative scroll-mt-24 overflow-hidden border-t border-hairline py-24 sm:py-32"
     >
       <div
         className="drift drift--gold"
