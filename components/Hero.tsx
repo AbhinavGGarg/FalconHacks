@@ -140,7 +140,8 @@ export default function Hero() {
           <Rise delay={0.66}>
             <p className="mt-10 flex items-center gap-3 text-sm text-muted">
               <FalconMark className="h-4 w-4 text-royal/70" />
-              Hosted by Falcon Hacks at Foothill High School
+              Hosted by Falcon Hacks at Foothill High School · Cohosted with
+              CodeStarters
             </p>
           </Rise>
         </div>

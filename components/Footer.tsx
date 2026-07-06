@@ -15,8 +15,9 @@ export default function Footer() {
               </span>
             </p>
             <p className="mt-5 max-w-[340px] text-sm leading-relaxed text-muted">
-              Hosted by Falcon Hacks at Foothill High School — a student-run
-              hackathon for builders across the Bay Area.
+              Hosted by Falcon Hacks at Foothill High School and cohosted with
+              CodeStarters — a student-run hackathon for builders across the Bay
+              Area.
             </p>
             <a
               href={LINKS.discord}
