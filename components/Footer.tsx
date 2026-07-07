@@ -37,7 +37,15 @@ export default function Footer() {
             </a>
             <p className="mt-6 flex items-center gap-2.5 font-mono text-[10px] uppercase tracking-[0.24em] text-muted">
               Cohosted with
-              <CodeStartersMark className="h-4" />
+              <a
+                href={LINKS.codestarters}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="CodeStarters (opens in new tab)"
+                className="transition-opacity duration-200 hover:opacity-75"
+              >
+                <CodeStartersMark className="h-4" />
+              </a>
             </p>
           </div>
 

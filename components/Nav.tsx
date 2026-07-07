@@ -99,15 +99,20 @@ export default function Nav() {
               FALCON HACKS <span className="text-gold">’26</span>
             </span>
           </a>
-          <span
-            className="hidden items-center gap-3.5 sm:flex"
-            aria-label="Cohosted with CodeStarters"
-          >
+          <span className="hidden items-center gap-3.5 sm:flex">
             <span
               className="h-2.5 w-2.5 shrink-0 rounded-full bg-muted/70"
               aria-hidden
             />
-            <CodeStartersMark className="h-[23px]" />
+            <a
+              href={LINKS.codestarters}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="CodeStarters — cohost (opens in new tab)"
+              className="transition-opacity duration-200 hover:opacity-75"
+            >
+              <CodeStartersMark className="h-[23px]" />
+            </a>
           </span>
         </div>
 
