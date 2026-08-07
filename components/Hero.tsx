@@ -91,7 +91,7 @@ export default function Hero() {
             <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-3 font-mono text-xs font-medium uppercase tracking-[0.2em] text-bone sm:text-sm">
               <span className="flex items-center gap-2.5">
                 <Calendar className="h-4 w-4 text-royal" aria-hidden />
-                Sat · October 10, 2026
+                Sat · October 24, 2026
               </span>
               <span className="flex items-center gap-2.5">
                 <MapPin className="h-4 w-4 text-royal" aria-hidden />
@@ -157,7 +157,7 @@ export default function Hero() {
               </p>
               <p className="mt-2 font-display text-2xl uppercase tracking-[0.02em] text-bone sm:text-3xl">
                 Next mission launches{" "}
-                <span className="text-gold">October 10, 2026</span>
+                <span className="text-gold">October 24, 2026</span>
               </p>
             </div>
             <Countdown />

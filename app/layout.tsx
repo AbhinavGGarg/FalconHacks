@@ -22,11 +22,11 @@ const plexMono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   title: "Falcon Hacks 2026 — Build Something That Takes Flight",
   description:
-    "A student-run Bay Area hackathon hosted by Falcon Hacks at Foothill High School. October 10, 2026.",
+    "A student-run Bay Area hackathon hosted by Falcon Hacks at Foothill High School. October 24, 2026.",
   openGraph: {
     title: "Falcon Hacks 2026 — Build Something That Takes Flight",
     description:
-      "A student-run Bay Area hackathon hosted by Falcon Hacks at Foothill High School. October 10, 2026.",
+      "A student-run Bay Area hackathon hosted by Falcon Hacks at Foothill High School. October 24, 2026.",
     type: "website",
   },
 };

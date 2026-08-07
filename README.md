@@ -2,7 +2,7 @@
 
 Marketing site for **Falcon Hacks 2026**, a student-run Bay Area hackathon hosted by the Falcon Hacks club at Foothill High School.
 
-**Sat · October 10, 2026 — Bay Area · Venue TBA**
+**Sat · October 24, 2026 — Bay Area · Venue TBA**
 **Free to attend · open to all high schoolers and younger**
 
 ## Stack

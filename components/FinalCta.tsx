@@ -85,7 +85,7 @@ export default function FinalCta() {
 
         <Reveal delay={0.14}>
           <p className="mt-8 font-mono text-sm font-medium uppercase tracking-[0.3em] text-bone/85 sm:text-base">
-            October 10, 2026 · Bay Area · Falcon Hacks
+            October 24, 2026 · Bay Area · Falcon Hacks
           </p>
         </Reveal>
 

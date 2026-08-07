@@ -2,12 +2,12 @@
 
 import { useEffect, useState } from "react";
 
-/* Live countdown to the event. Targets the start of Oct 10, 2026 in
+/* Live countdown to the event. Targets the start of Oct 24, 2026 in
    Bay Area time (PDT, UTC-7) so every visitor counts to the same moment.
    Renders dashes until mounted to avoid a server/client hydration
    mismatch, then ticks once a second. */
 
-const TARGET = new Date("2026-10-10T00:00:00-07:00").getTime();
+const TARGET = new Date("2026-10-24T00:00:00-07:00").getTime();
 
 type Parts = { d: number; h: number; m: number; s: number };
 
@@ -43,7 +43,7 @@ export default function Countdown() {
 
   const srLabel = parts
     ? `${parts.d} days, ${parts.h} hours, ${parts.m} minutes until Falcon Hacks`
-    : "Countdown to Falcon Hacks, October 10, 2026";
+    : "Countdown to Falcon Hacks, October 24, 2026";
 
   return (
     <div
