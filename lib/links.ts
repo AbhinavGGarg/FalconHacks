@@ -5,9 +5,9 @@
 
 export const LINKS = {
   /** Registration form (Google Form) — every "Register" button points here */
-  register: "https://forms.gle/7Ke1xrKE1VZp9HJm8",
+  register: "https://docs.google.com/forms/d/e/1FAIpQLSefiL2r7VyCluvbJXUhX30cQtsyGxNhiz-6tjkZT8OPYWBseA/viewform",
   /** Legacy alias, kept in sync with register */
-  updates: "https://forms.gle/7Ke1xrKE1VZp9HJm8",
+  updates: "https://docs.google.com/forms/d/e/1FAIpQLSefiL2r7VyCluvbJXUhX30cQtsyGxNhiz-6tjkZT8OPYWBseA/viewform",
   /** Sponsorship inquiries — opens an email to the organizer */
   sponsor: "mailto:abhinavmgarg@gmail.com?subject=Sponsoring%20Falcon%20Hacks%202026",
   /** Sponsorship prospectus PDF (hosted in /public) — opens in a new tab */
@@ -15,7 +15,7 @@ export const LINKS = {
   /** e.g. https://instagram.com/falconhacks */
   instagram: "#",
   /** Community Discord server invite */
-  discord: "https://discord.gg/DRa3YHkPDp",
+  discord: "https://discord.gg/RTDMwuKAEB",
   /** CodeStarters — cohost org (opens in a new tab) */
   codestarters: "https://codestarters.org/",
   /** e.g. https://linkedin.com/company/falcon-hacks */
