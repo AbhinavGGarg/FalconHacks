@@ -16,8 +16,6 @@ export const LINKS = {
   instagram: "#",
   /** Community Discord server invite */
   discord: "https://discord.gg/RTDMwuKAEB",
-  /** CodeStarters — cohost org (opens in a new tab) */
-  codestarters: "https://codestarters.org/",
   /** e.g. https://linkedin.com/company/falcon-hacks */
   linkedin: "#",
   /** Replace with the real inbox */

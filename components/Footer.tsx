@@ -1,4 +1,3 @@
-import CodeStartersMark from "./CodeStartersMark";
 import CrestMark from "./CrestMark";
 import { LINKS, NAV_ITEMS } from "@/lib/links";
 
@@ -35,18 +34,6 @@ export default function Footer() {
               </svg>
               Join our Discord
             </a>
-            <p className="mt-6 flex items-center gap-2.5 font-mono text-[10px] uppercase tracking-[0.24em] text-muted">
-              Cohosted with
-              <a
-                href={LINKS.codestarters}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="CodeStarters (opens in new tab)"
-                className="transition-opacity duration-200 hover:opacity-75"
-              >
-                <CodeStartersMark className="h-4" />
-              </a>
-            </p>
           </div>
 
           {/* Mission facts */}
