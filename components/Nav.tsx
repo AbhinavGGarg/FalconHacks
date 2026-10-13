@@ -205,7 +205,7 @@ export default function Nav() {
                 Register
               </CtaLink>
               <p className="mt-4 text-center font-mono text-[10px] uppercase tracking-[0.28em] text-muted">
-                Sat · October 24, 2026 — Bay Area
+                Sat · November 7, 2026 — Bay Area
               </p>
             </div>
           </motion.div>
