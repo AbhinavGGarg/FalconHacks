@@ -5,9 +5,9 @@
 
 export const LINKS = {
   /** Registration form (Google Form) — every "Register" button points here */
-  register: "https://docs.google.com/forms/d/e/1FAIpQLSefiL2r7VyCluvbJXUhX30cQtsyGxNhiz-6tjkZT8OPYWBseA/viewform",
+  register: "https://luma.com/45k58tq4",
   /** Legacy alias, kept in sync with register */
-  updates: "https://docs.google.com/forms/d/e/1FAIpQLSefiL2r7VyCluvbJXUhX30cQtsyGxNhiz-6tjkZT8OPYWBseA/viewform",
+  updates: "https://luma.com/45k58tq4",
   /** Sponsorship inquiries — opens an email to the organizer */
   sponsor: "mailto:abhinavmgarg@gmail.com?subject=Sponsoring%20Falcon%20Hacks%202026",
   /** Sponsorship prospectus PDF (hosted in /public) — opens in a new tab */
