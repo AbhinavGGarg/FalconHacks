@@ -42,7 +42,7 @@ export default function Footer() {
               Mission
             </p>
             <ul className="mt-5 space-y-3 font-mono text-xs uppercase tracking-[0.16em] text-bone/85">
-              <li>November 7, 2026</li>
+              <li>November 21, 2026</li>
               <li>Bay Area · Venue TBA</li>
               <li className="text-gold">Free to attend</li>
               <li>
